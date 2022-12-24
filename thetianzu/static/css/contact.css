@@ -1,0 +1,52 @@
+:root{
+    --lightcolor:#fedade;
+    --lightdark:#fb879a;
+    --maincolor:#712643;
+    --darkcolor:#212745;
+}
+
+
+
+*{
+    text-decoration: none;
+    text-transform: capitalize;
+    
+}
+body{
+    background-color: #fec7a1;
+}
+
+
+
+
+.head{
+    background-color: #00163d;
+    border-radius: 5px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+.head h1{
+    color: #fff;
+    margin-left: 30px;
+    
+}
+.head a{
+    color: #fff;
+    margin-right: 20px;
+}
+
+
+/*<---------------------------------------------------------------->*/
+.fromfeed {
+    margin-top: 10rem;
+    background-color: #712643;
+}

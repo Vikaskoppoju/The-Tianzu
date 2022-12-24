@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=EB+Garamond:wght@500&family=Metal+Mania&family=Shalimar&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            font-family: 'Source Serif Pro', serif;;
+        }
+        .fromfeed{
+            background-color: #712643;
+            margin-left: 20rem;
+            margin-right: 20rem;
+            border-radius: 8px;
+        }
+        .fromfeed table{
+           
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .fromfeed p{
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: #fff;
+            font-size: 30px;
+        }
+        .fromfeed td{
+            padding: 10px;
+        }
+        .fromfeed input{
+            border-radius: 8px;
+            height: 30px;
+            width: 20rem;
+        }
+        .fromfeed label{
+            font-size: 20px;
+            color: #fff;
+        }
+        .fromfeed textarea{
+            border-radius: 8px;
+            
+        }
+        .fromfeed .btn{
+            border-radius: 8px;
+            height: 40px;
+            background-color: #00163d; /* Green */
+            width: 300px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .fromfeed .btn:hover{
+            
+            background-color: #fec7a1;
+            color: #00163d;
+        }
+        .fromfeed .btn::after{
+            
+            background-color: #00163d;
+        }
+        #mess{
+            color: #fff;
+            background-color: #00163d;
+            padding: 10px;
+            border: 1rem;
+            border-radius: 5px;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="header" class="head">
+        
+        <div class="titletest">
+            <h1>Indian Culture</h1>
+        </div>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            
+
+        </div>
+            
+            
+            
+       
+    </div>
+    <div class="fromfeed">
+        <center><p>Feedback Form</p>
+        <table>
+            <form method="POST">
+                {% csrf_token %}
+                {% if messages %}
+                        <tr class="messages" colspan="2">
+                            {% for message in messages %}
+                            <td class="{{ message.tags }}" id="mess">{{ message }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                <tr>
+                    <td>
+                        <label>Name :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="ename" placeholder="Enter your name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email Id :</label>
+                    </td>
+                    <td>
+                        <input type="eamil" name="email" placeholder="Enter your email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Comment :</label>
+                    </td>
+                    <td>
+                        <textarea  name="feedback" rows="6" cols="50" required>
+                    </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="btn">Submit</button>
+                    </td>
+                </tr>
+            </form>
+            
+        </table></center>
+    </div>
+    
+    
+</body>
+</html>

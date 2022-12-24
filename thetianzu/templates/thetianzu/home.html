@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Culture</title>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    
+
+    
+    <style>
+        body{
+            background-color: #FAD961;
+            background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+
+        }
+        #header{
+            
+            background-color: rgb(3, 75, 27);
+            color: rgb(231, 232, 234);
+            top: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 5px;
+        }
+       
+        .indiancul{
+            margin-top: 11%;
+        }
+        
+        
+        
+        #footer{
+            background-color: rgb(3, 75, 27);
+            color: rgb(231, 232, 234);
+        }
+        #footer button{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 13px 32px;
+            left: 700px;
+            right: 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #individualContent{
+            margin-top: 3%;
+        }
+        #individualContent #box{
+            display: inline-block;
+        }
+        #box{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 250px;
+            height: 250px;
+        }
+        #box p{
+            text-align: center;
+        }
+        #box img{
+            height: 250px;
+            width: 250px;
+        }
+        #map{
+            display: block;
+            height: auto;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 5px;
+        }
+        
+        .indiancul{
+            color: #FFFFFF;
+            
+            font-family: Garamond, serif;
+            
+        }
+        .titletest{
+            text-align:center;
+            left: 30px;
+
+        }
+        .ancientin{
+            color: #FFFFFF;
+            
+            font-family: Garamond, serif;
+        }
+        .modernin{
+            color: #FFFFFF;
+            
+            font-family: Garamond, serif;
+        }
+        .mapn{
+            border-radius: 5px;
+            
+        }
+        .head{
+            text-align: center;
+            
+        }
+        img.logoim{
+            position: 0px 5px 5px 5px
+        }
+        #box button{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 13px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body >
+    <div id="header" class="head">
+        <ul>
+            <li><img src="{% static 'image/logo1.jpeg' %}" style="height: 60px;width: 60px;border-radius: 25%" class="logoim"></li></li>
+            <li style="font-size: 60px; font-family: 'Amita';font-size: 44px;",class="titletest">Indian Culture</li>
+            
+        </ul>
+    </div>
+
+    <div id="indiaCulture" class="indiancul">
+        <h2 style="font-family: 'Charm';font-size: 30px; color: rgb(205, 24, 24);">Indian Culture</h2>
+        <p style="font-family: 'Charm';font-size: 17px;color: rgb(14, 15, 15);"><strong> is a vast country with a lot of diversity in the physical and social environments.
+        Culture refers to the patterns of thought and behaviour of people. It includes beliefs, values, rules of conduct
+        Indian culture is the oldest of all the cultures of the world. In Spite of facing many ups and downs, Indian culture is shining with all its glory and splendour. The ancient cultures of Greece, Egypt, Rome, etc.,were destroyed with time, and their remnants are only left. But Indian culture is still alive today. Its fundamental principles are the same, as were in ancient times. The teachings of Lord Krishna, Mahavira, and Buddha are alive till today and are a source of inspiration. The values of karma, spirituality, non-violence, praying, reincarnation, truth etc., inspire the people of India today as well.
+        Indian origin religions are Hinduism, Buddhism, Jainism, and Sikhism. All of these religions are based on karma and dharma. Furthermore, these four are called as Indian religions. Indian religions are a major category of world religions along with Abrahamic religion
+        The Joint family system is the prevailing system of Indian culture.Arranged marriages are the norm in Indian culture. Probably most Indians have their marriages planned by their parents. In almost all Indian marriages, the bride’s family gives dowry to bridegroom. Weddings are certainly festive occasions in Indian culture.
+        India celebrates a huge number of festivals. These festivals are very diverse due to multi-religious and multi-cultural Indian society. Indians greatly value festive occasions. Above all, the whole country joins in the celebrations irrespective of the differences.
+        Traditional Indian food, arts, music, sports, clothing, and architecture vary significantly across different regions. These components are influenced by various factors. Above all, these factors are geography, climate, culture, and rural/urban setting.
+        India enjoys a wide variety of cultural and traditional presence amongst the 28 states</strong></p>
+    </div>
+    <div style="text-align: center;font-size: 60px; font-family: 'Amita';font-size: 44px">
+        <h2>Have a great fun by  exploring culture of india</h2>
+        <h3>On your own choice</h3>
+    </div>
+
+    <div id="map" align="center" class="mapn">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-10 offset-md-1">
+                    {{ m|safe }}
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    
+    </div>
+
+    <div id="ancientIndia" class="ancientin">
+        <h2 style="font-family: 'Charm';font-size: 30px; color: rgb(205, 24, 24);">Ancient India</h2>
+        <p style="font-family: 'Charm';font-size: 17px;color: rgb(12, 13, 13);"><strong> has a long history rich in culture.india is a country in South Asia whose name comes from the Indus River. The name 'Bharata' is used as a designation for the country in their constitution referencing the ancient mythological emperor, Bharata, whose story is told, in part, in the Indian epic Mahabharata.
+        According to the writings known as the Puranas (religious/historical texts written down in the 5th century CE), Bharata conquered the whole subcontinent of India and ruled the land in peace and harmony. The land was, therefore, known as Bharatavarsha (`the subcontinent of Bharata'). Hominid activity in the Indian subcontinent stretches back over 250,000 years, and it is, therefore, one of the oldest inhabited regions on the planet.
+        The ancient civilizations of India—the Indus Valley Civilization, the Maurya Empire, and the Gupta Empire—were made up of sophisticated people whose art and lives contributed greatly to future generations. In addition to learning about the culture of ancient India, readers will learn how political and social changes of any region affect its art and culture. Boasting engaging text, rich and colorful illustrations, and an enhanced e-book option, this title is a valuable resource for report research.
+        <br><span style="font-weight:bold ;"> VEDIC AGE</span>Vedic Period or the Vedic Age refers to that time period when the Vedic Sanskrit texts were composed in India. The society that emerged during that time is known as the Vedic Period, or the Vedic Age, Civilization. The Vedic Civilization flourished between the 1500 BC and 500 BC on the Indo-Gangetic Plains of the Indian subcontinent.
+        <br><span style="font-weight:bold ;"> ANCIENT INDIAN ART</span>Each era is unique in its distinctive culture. In the same way Indian art forms have continuously evolved over thousands of years. In ancient India, various art forms like paintings, architecture and sculpture evolved. The history of art in ancient India begins with prehistoric rock paintings.
+        <br><span style="font-weight:bold ;"> ANCIENT MUSIC AND ART </span>Music and dance developed significantly throughout the ancient culture of India. People invented and used instruments, similar to a bass guitar to keep the rhythm of songs. Dancers wore elaborate costumes, exotic make up and jewelry, and they often performed in temples and in royal courts.
+        Ancient India Culture developed into what is referred to as traditional India culture. Traditional culture refers to the practices fused into the everyday family life of the Indian people and influenced India Culture Today.The culture of ancient India developed and influenced nearly every aspect of this beautiful country.
+        </strong></p>
+    </div>
+
+    <div id="modernIndia" class="modernin">
+        <h2 style="font-family: 'Charm';font-size: 30px; color: rgb(205, 24, 24);">Modern India</h2>
+        <p style="font-family: 'Charm';font-size: 17px;color: rgb(12, 13, 13);"><strong> Indian culture is a combination of traditional Indian customs, British heritage and other modern influences from around the world. It would impossible to cover every aspect of it, but let's explore some important and interesting elements.
+        Indian culture which is one of the oldest richest culture in the world with very language custom belief ideas tab use codes instructions works of art architecture ritual ceremony acceptor India’s cultural history of several thousand years old and it shows continuity and subtle change with a strong third of Duty epitomized in the relative power of culture and unique display of unity in diversity. Which the conquest of European power and subsequent British rule in India has had a profound effect on western culture on Indian society. Western culture has made its presence in various forms.
+        There were different kinds of westernization one kind to emergence of a westernise subcultural pattern through a minority section of Indians who first came in contact with the western culture.
+        This includes the subculture of Indian intellectuals who not only adopted many cognitive patterns or way of thinking like this style but also supported its expansion.
+        This impact of westernization was mainly in urban areas. But some villages are more westernised than urban areas.
+        Consequences of western culture on Indian society Affected  joint family, marriage and other social structures.instead of being governed by tradition or custom, society comes to be governed according to abstract principles formulated for that purpose. Traditional religious beliefs often decline in importance, and distinctive cultural traits are often lost.</strong></p>
+    </div>
+
+    <div id="individualContent" class="bun">
+        <div id="box">
+            <img src="{% static 'image/icon/11.jpg' %}" alt="1"><hr>
+            <a href="http://127.0.0.1:8000/state/1"><button>ANDHRA PRADESH</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/21.jpg' %}" alt="2"><hr>
+            <a href="http://127.0.0.1:8000/state/2"><button>ARUNACHAL PRADESH</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/31.jpg' %}" alt="3"><hr>
+            <a href="http://127.0.0.1:8000/state/3"><button>ASSAM</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/41.jpg' %}" alt="4"><hr>
+            <a href="http://127.0.0.1:8000/state/4"><button>BIHAR</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/51.jpg' %}" alt="5"><hr>
+            <a href="http://127.0.0.1:8000/state/5"><button>CHATTISGARH</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <script>
+            function fun(){
+                if(document.getElementById("hide").style.display === "none"){
+                    document.getElementById("hide").style.display = "block";
+                    document.getElementById("btn").innerHTML = "Explore Less...";
+                }else{
+                    document.getElementById("hide").style.display = "none";
+                    document.getElementById("btn").innerHTML = "Explore All...";
+                }
+            }
+        </script>
+        <div id="hide" style="display: none;">
+        <div id="box">
+            <img src="{% static 'image/icon/61.jpg' %}" alt="6"><hr>
+            <a href="http://127.0.0.1:8000/state/6"><button>GOA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/71.jpg' %}" alt="7"><hr>
+            <a href="http://127.0.0.1:8000/state/7"><button>GUJARAT</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/81.jpg' %}" alt="8"><hr>
+            <a href="http://127.0.0.1:8000/state/8"><button>HARYANA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/91.jpg' %}" alt="9"><hr>
+            <a href="http://127.0.0.1:8000/state/9"><button>HIMACHAL PRADESH</button></a><hr>
+
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/101.jpg' %}" alt="10"><hr>
+            <a href="http://127.0.0.1:8000/state/10"><button>JAMMU AND KASHMIR</button></a><hr>
+
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/111.jpg' %}" alt="11"><hr>
+            <a href="http://127.0.0.1:8000/state/11"><button>JHARKHAND</button></a><hr>
+
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/121.jpg' %}" alt="12"><hr>
+            <a href="http://127.0.0.1:8000/state/12"><button>KARNATAKA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/131.jpg' %}" alt="13"><hr>
+            <a href="http://127.0.0.1:8000/state/13"><button>KERALA</button></a><hr>
+
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/141.jpg' %}" alt="14"><hr>
+            <a href="http://127.0.0.1:8000/state/14"><button>MADHYA PRADESH</button></a><hr>
+
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/151.jpg' %}" alt="15"><hr>
+            <a href="http://127.0.0.1:8000/state/15"><button>MAHARASHITRA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/161.jpg' %}" alt="16"><hr>
+            <a href="http://127.0.0.1:8000/state/16"><button>MANIPUR</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/171.jpg' %}" alt="17"><hr>
+            <a href="http://127.0.0.1:8000/state/17"><button>MEGHALAYA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/181.jpg' %}" alt="18"><hr>
+            <a href="http://127.0.0.1:8000/state/18"><button>MIZORAM</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/191.jpg' %}" alt="19"><hr>
+            <a href="http://127.0.0.1:8000/state/19"><button>NAGALAND</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/201.jpg' %}" alt="20"><hr>
+            <a href="http://127.0.0.1:8000/state/20"><button>ORISSA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/211.jpg' %}" alt="21"><hr>
+            <a href="http://127.0.0.1:8000/state/21"><button>PUNJAB</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/221.jpg' %}" alt="22"><hr>
+            <a href="http://127.0.0.1:8000/state/22"><button>RAJASTHAN</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/231.jpg' %}" alt="23"><hr>
+            <a href="http://127.0.0.1:8000/state/23"><button>SIKKIM</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/241.jpg' %}" alt="24"><hr>
+            <a href="http://127.0.0.1:8000/state/24"><button>TAMIL NADU</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/251.jpg' %}" alt="25"><hr>
+            <a href="http://127.0.0.1:8000/state/25"><button>TRIPURA</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/261.jpg' %}" alt="26"><hr>
+            <a href="http://127.0.0.1:8000/state/26"><button>UTTAR PRADESH</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/271.jpg' %}" alt="27"><hr>
+            <a href="http://127.0.0.1:8000/state/27"><button>UTTARANCHAL</button></a><hr>
+        </div> &nbsp;&nbsp;
+        <div id="box">
+            <img src="{% static 'image/icon/281.jpg' %}" alt="28"><hr>
+            <a href="http://127.0.0.1:8000/state/28"><button>WEST BRNGAL</button></a><hr>
+        </div> &nbsp;&nbsp;
+        
+        </div>
+        <button onclick="fun()" style="background-color: rgb(9, 93, 59); color: white;" id="btn">Explore All...</button>
+    </div>
+
+    <div id="footer">
+        <p align="center" style="font-family: 'Charm';font-size: 22px;">Explore our Indian Culture with us.</p>
+        <ul style="list-style-type: none; display: inline-block;">
+            <li style="font-family: 'Charm';font-size: 22px;">etantri2k22@gmail.com</li>
+            <li>
+                <ul style="list-style-type: none; display: inline-block;">
+                    <li><a href="http://127.0.0.1:8000/home/"><button>Back to home</button></a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

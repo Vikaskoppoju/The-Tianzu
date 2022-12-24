@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Culture</title>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <style>
+        #header{
+            top: 0%;
+            background-color: rgb(3, 75, 27);
+            color: rgb(231, 232, 234);
+        }
+        #footer button{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 13px 32px;
+            left: 700px;
+            right: 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        #footer{
+            background-color: rgb(3, 75, 27);
+            color: rgb(231, 232, 234);
+        }
+        body{
+            background-color: #FAD961;
+            background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+        }
+        *{box-sizing: border-box;}
+        .mySlides{
+            display: none;
+        } img{vertical-align: middle;}
+        .slideshow-container{
+           
+            margin: auto;
+            position: relative;
+            height: 200px;
+            width: 1000px;
+        }
+        .text{
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .fade{
+            animation-name: fade;
+            animation-duration: 2.0s;
+        }
+        @keyframes fade {
+            from{opacity: .5}
+            to{opacity: 1}
+        }
+        .head{
+            text-align: center;
+        }
+        .img.head{
+            shape-image-threshold: round;
+            box-shadow: #F76B1C;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="header" class="head">
+        <ul style="list-style-type: none; display: inline;">
+            <li><img src="{% static 'image/logo1.jpeg' %}" style="height: 70px;width: 70px;border-radius: 25%;float: left;"></li>
+            <li style="font-size: 60px; font-family: 'Amita';font-size: 44px;;" class="title">The Tianzu</li>
+            
+        </ul>
+    </div>
+
+    <section>
+        <p style="font-family: 'Calligraffitti';font-size: 22px;"><strong>Welcome to <span>{{ record.statnam }}</span></strong></p>
+        
+        <div id="content" style="margin-top: 0%;">
+    		<div class="slideshow-container">
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}1.jpg" style="height: 400px;width: 800px;">
+            		
+        		</div>
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}3.jpg" style="height: 400px;width: 800px;">
+            		
+        		</div>
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}6.jpg" style="height: 400px;width: 800px;">
+            		
+        		</div>
+    		</div>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides(){
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for(i=0;i<slides.length;i++){
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if(slideIndex>slides.length){slideIndex=1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides,7000);
+            }
+            function manageInfo(){
+                var text = document.getElementById("moreInfo");
+                var btn = document.getElementById("readMore");
+                if(text.style.display==="none"){
+                    text.style.display="inline";
+                    btn.innerHTML="Read Less";
+                }else{
+                    text.style.display="none";
+                    btn.innerHTML="Read More";
+                }
+            }
+        </script>
+    </section>
+    <section style="font-family: 'Charm';font-size: 22px;">
+        <h2>Languages</h2>
+        <p>The official languages of {{ record.statnam }} is/are {{ record.lang }}</p>
+        <h2>Traditional Food</h2>
+        <p>The traditional receipes of {{ record.statnam }} are {{ record.food }}</p>
+        <img src="{% static 'image/' %}{{record.id}}f.jpg" class="foodyclass" style="height: 400px;width: 800px;">
+        <h2>Festivals</h2>
+        <p>The list of famous festivals celebrated in {{ record.statnam }} are {{ record.fest }}</p>
+        <img src="{% static 'image/icon/' %}{{record.id}}2.jpg">
+        <h2>Arts</h2>
+        <p>The traditional arts of {{ record.statnam }} are {{ record.art }}</p>
+        <img src="{% static 'image/icon/' %}{{record.id}}3.jpg">
+        <h2>Sports</h2>
+        <p>The famous sports playing in {{ record.statnam }} are {{ record.sport }}</p>
+        <img src="{% static 'image/icon/' %}{{record.id}}4.jpg">
+        <h2>Architecture</h2>
+        <p>{{ record.arch }}</p>
+        
+        <h2>Clothing Style</h2>
+        <p>The traditional clothing styles followed by {{ record.statnam }} are {{ record.cloth }}</p>
+        <img src="{% static 'image/icon/' %}{{record.id}}5.jpg">
+        <h2>Tribals</h2>
+        <p>The list of tribals living and conserving the tradition in {{ record.statnam }} are {{ record.tribe }}</p>
+        <img src="{% static 'image/icon/' %}{{record.id}}6.jpg">
+
+    </section>
+
+    <div id="footer">
+        <p align="center" style="font-family: 'Charm';font-size: 22px;">Explore our Indian Culture with us.</p>
+        <ul style="list-style-type: none; display: inline-block;">
+            <li style="font-family: 'Charm';font-size: 22px;">etantri2k22@gmail.com</li>
+            <li>
+                <ul style="list-style-type: none; display: inline-block;">
+                    <li><a href="http://127.0.0.1:8000/home/"><button>Back to home</button></a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

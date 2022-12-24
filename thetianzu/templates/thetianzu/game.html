@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Culture</title>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link href="{% static 'css/state.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=EB+Garamond:wght@500&family=Metal+Mania&family=Shalimar&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            font-family: 'Source Serif Pro', serif;;
+        }
+        .lang{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .langp{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .lang h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .food{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .foodp{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .food h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .fest{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .festp{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .fest h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .art{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .art p{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .art h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .spo{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .spo p{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .spo h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .arc{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .arc p{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .arc h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .cloth{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .cloth p{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .cloth h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .trib{
+            background-color: #f2796b;
+            border-radius: 10px;
+            
+            color: #fff;
+        
+        }
+        .trib p{
+            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        
+        }
+        .trib h2{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div id="header" class="head">
+        <div class="titletest">
+            <h1>The Tianzu</h1>
+        </div>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+
+        </div>
+    </div>
+
+    <section class="slides">
+        <p style="font-family: 'Calligraffitti';font-size: 22px;"><strong>Welcome to <span>{{ record.statnam }}</span></strong></p>
+        
+        <div id="content" style="margin-top: 0%;">
+    		<center><div class="slideshow-container">
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}1.jpg" style="height: 400px;width: 800px; border-radius: 10px;">
+            		
+        		</div>
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}3.jpg" style="height: 400px;width: 800px; border-radius: 10px;">
+            		
+        		</div>
+        		<div class="mySlides fade">
+            		<img src="{% static 'image/icon/' %}{{record.id}}6.jpg" style="height: 400px;width: 800px; border-radius: 10px;">
+            		
+        		</div>
+    		</div></center>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides(){
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for(i=0;i<slides.length;i++){
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if(slideIndex>slides.length){slideIndex=1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides,7000);
+            }
+            function manageInfo(){
+                var text = document.getElementById("moreInfo");
+                var btn = document.getElementById("readMore");
+                if(text.style.display==="none"){
+                    text.style.display="inline";
+                    btn.innerHTML="Read Less";
+                }else{
+                    text.style.display="none";
+                    btn.innerHTML="Read More";
+                }
+            }
+        </script>
+    </section>
+    <section style="font-family: 'Charm';font-size: 22px;">
+        <div class="lang">
+            <h2 >Languages</h2>
+            <p class="langp">The official languages of {{ record.statnam }} is/are {{ record.lang }}</p>
+        </div>
+        <div class="food">
+            <h2 class="food">Traditional Food</h2>
+            <p class="foodp">The traditional receipes of {{ record.statnam }} are {{ record.food }}</p>
+        </div>
+        
+        <center><img src="{% static 'image/' %}{{record.id}}f.jpg" class="foodyclass" style="height: 400px;width: 800px;"></center>
+        <div class="fest">
+            <h2 >Festivals</h2>
+            <p class="festp">The list of famous festivals celebrated in {{ record.statnam }} are {{ record.fest }}</p>
+        </div>
+
+        <center><img src="{% static 'image/icon/' %}{{record.id}}2.jpg" class="festi"></center>
+        <div class="art">
+            <h2>Arts</h2>
+            <p class="artp">The traditional arts of {{ record.statnam }} are {{ record.art }}</p>
+        </div>
+        
+        <center><img src="{% static 'image/icon/' %}{{record.id}}3.jpg" class="arti"></center>
+        <div class="spo">
+            <h2>Sports</h2>
+            <p class="spop">The famous sports playing in {{ record.statnam }} are {{ record.sport }}</p>
+        </div>
+        
+        <center><img src="{% static 'image/icon/' %}{{record.id}}4.jpg" class="spoi"></center>
+        <div class="arc">
+            <h2>Architecture</h2>
+            <p class="arcp">{{ record.arch }}</p>
+        </div>
+        
+        <div class="cloth">
+            <h2>Clothing Style</h2>
+            <p class="clothp">The traditional clothing styles followed by {{ record.statnam }} are {{ record.cloth }}</p>
+        </div>
+        
+        <center><img src="{% static 'image/icon/' %}{{record.id}}5.jpg"></center>
+        <div class="trib">
+            <h2>Tribals</h2>
+            <p class="tribp">The list of tribals living and conserving the tradition in {{ record.statnam }} are {{ record.tribe }}</p>
+        </div>
+        
+        <center><img src="{% static 'image/icon/' %}{{record.id}}6.jpg"></center>
+
+    </section>
+
+    <div id="footer">
+        <p align="center" style="font-family: 'Charm';font-size: 22px;">Explore our Indian Culture with us.</p>
+        <ul style="list-style-type: none; display: inline-block;">
+            <li style="font-family: 'Charm';font-size: 22px;">etantri2k22@gmail.com</li>
+            <li>
+                <ul style="list-style-type: none; display: inline-block;">
+                    <li><a href="{% url 'home' %}"><button>Back to home</button></a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
